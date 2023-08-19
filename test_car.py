@@ -8,7 +8,7 @@ from models import Rorschach
 from models import Thovex
 
 
-class TestCalliope(unittest.TestCase):
+class TestCalliope(unittest.TestCase): #CapuletEngine + SpindlerBattery
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
         last_service_date = today.replace(year=today.year - 3)
@@ -44,7 +44,7 @@ class TestCalliope(unittest.TestCase):
         self.assertFalse(car.needs_service())
 
 
-class TestGlissade(unittest.TestCase):
+class TestGlissade(unittest.TestCase): #WilloughbyEngine + SpindlerBattery
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
         last_service_date = today.replace(year=today.year - 3)
@@ -80,10 +80,10 @@ class TestGlissade(unittest.TestCase):
         self.assertFalse(car.needs_service())
 
 
-class TestPalindrome(unittest.TestCase):
+class TestPalindrome(unittest.TestCase): #SternmanEngine + SpindlerBattery
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 5)
+        last_service_date = today.replace(year=today.year - 3)
         warning_light_is_on = False
 
         car = Palindrome(last_service_date, warning_light_is_on)
@@ -91,7 +91,7 @@ class TestPalindrome(unittest.TestCase):
 
     def test_battery_should_not_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 1)
         warning_light_is_on = False
 
         car = Palindrome(last_service_date, warning_light_is_on)
@@ -112,7 +112,7 @@ class TestPalindrome(unittest.TestCase):
         self.assertFalse(car.needs_service())
 
 
-class TestRorschach(unittest.TestCase):
+class TestRorschach(unittest.TestCase): #WilloughbyEngine + NubbinBattery
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
         last_service_date = today.replace(year=today.year - 5)
@@ -148,7 +148,7 @@ class TestRorschach(unittest.TestCase):
         self.assertFalse(car.needs_service())
 
 
-class TestThovex(unittest.TestCase):
+class TestThovex(unittest.TestCase): #CapuletEngine + NubbinBattery
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
         last_service_date = today.replace(year=today.year - 5)
@@ -186,3 +186,4 @@ class TestThovex(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
