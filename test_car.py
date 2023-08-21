@@ -11,7 +11,7 @@ from models import Thovex
 class TestCalliope(unittest.TestCase): #CapuletEngine + SpindlerBattery
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 4)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -20,7 +20,7 @@ class TestCalliope(unittest.TestCase): #CapuletEngine + SpindlerBattery
 
     def test_battery_should_not_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 1)
+        last_service_date = today.replace(year=today.year - 2)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -47,7 +47,7 @@ class TestCalliope(unittest.TestCase): #CapuletEngine + SpindlerBattery
 class TestGlissade(unittest.TestCase): #WilloughbyEngine + SpindlerBattery
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 4)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -56,7 +56,7 @@ class TestGlissade(unittest.TestCase): #WilloughbyEngine + SpindlerBattery
 
     def test_battery_should_not_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 1)
+        last_service_date = today.replace(year=today.year - 2)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -83,7 +83,7 @@ class TestGlissade(unittest.TestCase): #WilloughbyEngine + SpindlerBattery
 class TestPalindrome(unittest.TestCase): #SternmanEngine + SpindlerBattery
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 4)
         warning_light_is_on = False
 
         car = Palindrome(last_service_date, warning_light_is_on)
@@ -91,7 +91,7 @@ class TestPalindrome(unittest.TestCase): #SternmanEngine + SpindlerBattery
 
     def test_battery_should_not_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 1)
+        last_service_date = today.replace(year=today.year - 2)
         warning_light_is_on = False
 
         car = Palindrome(last_service_date, warning_light_is_on)

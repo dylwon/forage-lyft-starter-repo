@@ -23,4 +23,4 @@ class SpindlerBattery(Battery):
         super().__init__(current_date, last_service_date)
 
     def needs_service(self) -> bool:
-        return self.current_date.year - self.last_service_date.year > 2
+        return self.current_date.year - self.last_service_date.year > 3
